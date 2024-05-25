@@ -1,0 +1,172 @@
+<section class="slider-section">
+    <div class="slider-container" id="slider-container">
+        <button class="slider-btn" id="prev-btn">&lt;</button>
+        <div class="slider-inner">
+            <div class="slider-card">
+                <img src="/Assets/img (2).png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 1</p>
+                    <p>$10.99</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <img src="/Assets/img (3).png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 2</p>
+                    <p>$12.99</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <img src="/Assets/img (4).png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 3</p>
+                    <p>$14.99</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <img src="/Assets/img.png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 4</p>
+                    <p>$11.99</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <img src="/Assets/img (2).png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 5</p>
+                    <p>$13.99</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <img src="/Assets/img (3).png" alt="Food Image">
+                <div class="card-description">
+                    <p>Delicious Food 2</p>
+                    <p>$12.99</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn" id="next-btn">&gt;</button>
+    </div>
+</section>
+
+
+
+.slider-section {
+    position: relative;
+    top: -50px;
+    z-index: 900;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    margin: 0 -50px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.slider-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.slider-card .card-description {
+    padding: 10px;
+    text-align: center;
+}
+
+.slider-card.active {
+    transform: scale(1.2);
+}
+
+.slider-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#prev-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+
+
+.slider-card {
+    width: 200px;
+    height: 240px;
+}
+
+.slider-card.active {
+    transform: scale(1.3);
+}
+
+/*// Carousel functionality
+const sliderContainer = document.getElementById('slider-container');
+const sliderInner = document.querySelector('.slider-inner');
+const sliderCards = document.querySelectorAll('.slider-card');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+let cardIndex = 0;
+
+function updateSlider() {
+    const cardWidth = sliderCards[0].offsetWidth;
+    const offset = cardWidth * cardIndex;
+    sliderInner.style.transform = `translateX(-${offset}px)`;
+    
+    // Make middle card larger
+    sliderCards.forEach((card, index) => {
+        card.classList.remove('active');
+        if (index === (cardIndex + 2) % sliderCards.length) {
+            card.classList.add('active');
+        }
+    });
+}
+
+function moveToNextCard() {
+    cardIndex = (cardIndex + 1) % sliderCards.length;
+    updateSlider();
+}
+
+function moveToPrevCard() {
+    cardIndex = (cardIndex - 1 + sliderCards.length) % sliderCards.length;
+    updateSlider();
+}
+
+nextBtn.addEventListener('click', moveToNextCard);
+prevBtn.addEventListener('click', moveToPrevCard);
+
+// Initial setup
+updateSlider();*/
