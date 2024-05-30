@@ -557,9 +557,56 @@ body {
 
 
 /*****************Menu -start*******************/
-.section {
-    background-color: #ffcc3fbd;
+
+/* Menu Section Styles */
+.menu-section {
+    padding: 10px 5px;
+    text-align: center;
 }
+
+.menu-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.category {
+    background-color: #ffcc3fbd;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.category h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.dish {
+    background-color: white;
+    height: 150px; /* Adjust as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .dishes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /*****************Menu - end*******************/
 
 
