@@ -1,3 +1,5 @@
+// script.js
+
 // Toggle navigation for mobile menu
 document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('nav-list').classList.toggle('active');
@@ -44,20 +46,61 @@ var trandingSlider = new Swiper('.tranding-slider', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 10
         },
-        480: {
-            slidesPerView: 2,
+        412: {
+            slidesPerView: 2.2,
             spaceBetween: 20
         },
-        640: {
-            slidesPerView: 3,
+        430: {
+            slidesPerView: 2.3,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 3.5,
+            spaceBetween: 30
+        },
+        820: {
+            slidesPerView: 3.67,
             spaceBetween: 30
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3.9,
+            spaceBetween: 40
+        },
+        1440: {
+            slidesPerView: 4.2,
             spaceBetween: 40
         }
     }
 });
+
+// Story section animation
+function animateStory() {
+    const storyLines = document.querySelectorAll('.story-line');
+    const storySection = document.querySelector('.story-section');
+    const sectionTop = storySection.getBoundingClientRect().top;
+    const sectionBottom = storySection.getBoundingClientRect().bottom;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop <= windowHeight && sectionBottom >= 0) {
+        storyLines.forEach((line, index) => {
+            setTimeout(() => {
+                line.classList.add('visible');
+            }, index * 100);
+        });
+    } else {
+        storyLines.forEach((line, index) => {
+            setTimeout(() => {
+                line.classList.remove('visible');
+            }, index * 100);
+        });
+    }
+}
+
+window.addEventListener('scroll', animateStory);
+window.addEventListener('resize', animateStory);
+
+// Initial animation check
+animateStory();
