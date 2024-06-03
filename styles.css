@@ -466,6 +466,23 @@ body {
     }
 }
 
+@media (max-width: 720px) {
+    #tranding .tranding-slider {
+        height: 400px;
+        padding: 10px 0;
+    }
+
+    .tranding-slide {
+        width: 210px !important;
+        height: 340px !important;
+    }
+
+    .tranding-slide .tranding-slide-img img {
+        width: 250px !important;
+        height: 340px !important;
+    }
+}
+
 @media (max-width: 412px) {
     #tranding .tranding-slider {
         height: 380px;
