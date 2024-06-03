@@ -51,6 +51,7 @@ body {
     background-color: #ffcc3fbd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    padding-top: 20px;
 }
 
 /*****************nav css - start*******************/
@@ -76,14 +77,6 @@ body {
     flex-direction: column;
     cursor: pointer;
     margin-right: 0;
-}
-
-.bar {
-    height: 5px;
-    width: 17px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.3s;
 }
 
 .nav-list {
@@ -113,6 +106,23 @@ body {
     display: inline-block;
 }
 
+/*Hamburger start*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 5px;
+    width: 17px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/*Hamburger...*/
+
 .search-container {
     display: flex;
     align-items: center;
@@ -137,9 +147,11 @@ body {
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
-        text-align: center;
+        width: 25%;
+        text-align: left;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        margin-left: 10px;
     }
 
     .nav-list.active {
@@ -147,6 +159,20 @@ body {
     }
 
 }
+
+
+        /* Change the design of the hamburger when clicked */
+        .menu-toggle.open .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.open .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
 /*****************nav css - end*******************/
 
@@ -193,7 +219,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #f7f3f3;
+    background-color: #f3eeee;
     color: #000;
 }
 /*****************hero header - end*******************/
@@ -526,15 +552,13 @@ body {
 
 /*****************Story -start*******************/
 .story-section {
-    margin: 50px 0;
+    margin: 50px 0 5px;
     padding: 20px;
     text-align: center;
     overflow: hidden;
     position: relative;
     z-index: 3;
     background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 .story-section h2 {
@@ -545,7 +569,7 @@ body {
 .story-line {
     opacity: 0;
     transform: translateX(100%);
-    transition: transform 2s ease-out, opacity 4s ease-out;
+    transition: transform 1.5s ease-out, opacity 2.5s ease-out;
 }
 
 /* Animation States */
@@ -555,43 +579,144 @@ body {
 }
 /*****************Story - end*******************/
 
+.links-section {
+    padding-top: 5px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+
+}
+
+.links-container {
+    display: flex;
+    gap: 20px;
+}
+
+.glovo-btn {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-image: url('/Assets/img (4).png'); /* Path to your background image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px; /* Align text vertically */
+    cursor: pointer;
+}
+.map-btn {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-image: url('/Assets/img (2).png'); /* Path to your background image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px; /* Align text vertically */
+    cursor: pointer;
+}
+
+#map-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    width: 80%;
+    height: 80%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 
 /*****************Menu -start*******************/
 
-/* Menu Section Styles */
+/* Menu Section Styles*/
 .menu-section {
-    padding: 10px 5px;
+    padding: 2px 2px;
     text-align: center;
+    background-color: #ffcc3fbd;
 }
 
 .menu-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .category {
-    background-color: #ffcc3fbd;
-    padding: 5px;
-    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 30px;
     border-radius: 8px;
 }
 
-.category h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.category h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
 .dishes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 
 .dish {
     background-color: white;
-    height: 150px; /* Adjust as needed */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-info {
+    padding: 10px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dish-description, .dish-price {
+    margin: 0;
+}
+
+.dish.expanded {
+    z-index: 10;
+    transform: scale(1.5);
 }
 
 /* Responsive Styles */
@@ -610,10 +735,43 @@ body {
 /*****************Menu - end*******************/
 
 
-/* footer */
-footer{
+/* footer
+footer {
     background-color: #0f0f0f;
     color: #fff;
-    margin-top: 20px;
+    height: 25vh;
+    font-size: 20px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+}*/
+
+footer {
+    background-color: #000000;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    position: rlative;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    font-size: 1.2rem;
 }
+
+footer p {
+    margin-top: 5px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
 

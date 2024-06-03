@@ -8,7 +8,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 // Search function
 function searchFunction() {
     let input = document.getElementById('search-bar').value.toLowerCase();
-    let sections = document.querySelectorAll('.section');
+    let sections = document.querySelectorAll('.body');
     let found = false;
 
     sections.forEach(section => {
@@ -46,7 +46,7 @@ var trandingSlider = new Swiper('.tranding-slider', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 10
         },
         412: {
@@ -74,6 +74,13 @@ var trandingSlider = new Swiper('.tranding-slider', {
             spaceBetween: 40
         }
     }
+});
+
+// Image expansion and collapse
+document.querySelectorAll('.dish-image').forEach(image => {
+    image.addEventListener('click', function() {
+        this.parentElement.classList.toggle('expanded');
+    });
 });
 
 // Story section animation
@@ -104,3 +111,24 @@ window.addEventListener('resize', animateStory);
 
 // Initial animation check
 animateStory();
+
+document.getElementById('external-link-btn').onclick = function() {
+    window.location.href = 'https://www.example.com';
+};
+
+document.getElementById('show-map-btn').onclick = function() {
+    document.getElementById('map-overlay').style.display = 'flex';
+    initMap();
+};
+
+document.getElementById('close-map-btn').onclick = function() {
+    document.getElementById('map-overlay').style.display = 'none';
+};
+
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+    });
+}
+
