@@ -58,7 +58,7 @@ var trandingSlider = new Swiper('.tranding-slider', {
             spaceBetween: 20
         },
         720: {
-            slidesPerView: 3,
+            slidesPerView: 2.82,
             spaceBetween: 30
         },
         768: {
