@@ -400,18 +400,35 @@ body {
 
 @media (max-width:1440px) {
     #tranding .tranding-slider {
-        height: 510px;
+        height: 580px;
         padding: 10px 0;
     }
 
     .tranding-slide {
-        width: 302px !important;
-        height: 440px !important;
+        width: 226px !important;
+        height: 500px !important;
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 342px !important;
-        height: 440px !important;
+        width: 370px !important;
+        height: 500px !important;
+    }
+}
+
+@media (max-width:1080px) {
+    #tranding .tranding-slider {
+        height: 520px;
+        padding: 10px 0;
+    }
+
+    .tranding-slide {
+        width: 217px !important;
+        height: 460px !important;
+    }
+
+    .tranding-slide .tranding-slide-img img {
+        width: 303px !important;
+        height: 460px !important;
     }
 }
 
@@ -468,18 +485,18 @@ body {
 
 @media (max-width: 720px) {
     #tranding .tranding-slider {
-        height: 400px;
+        height: 420px;
         padding: 10px 0;
     }
 
     .tranding-slide {
-        width: 210px !important;
-        height: 340px !important;
+        width: 208px !important;
+        height: 360px !important;
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 248px !important;
-        height: 340px !important;
+        width: 238px !important;
+        height: 360px !important;
     }
 }
 
