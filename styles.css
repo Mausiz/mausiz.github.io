@@ -85,6 +85,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: row;
+    font-size: 18px;
 }
 
 .nav-list li {
@@ -101,9 +102,8 @@ body {
 }
 
 .nav-btn:hover {
-    background-color: #ffcc3fbd;
+    background-color: #a3a3a3;
     color: #fff;
-    display: inline-block;
 }
 
 /*Hamburger start*/
@@ -147,11 +147,13 @@ body {
         position: absolute;
         top: 60px;
         left: 0;
-        width: 25%;
+        width: 30%;
         text-align: left;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 10px 0;
         margin-left: 10px;
+        border-radius: 10%;
+        font-size: 14px;
     }
 
     .nav-list.active {
@@ -162,17 +164,17 @@ body {
 
 
         /* Change the design of the hamburger when clicked */
-        .menu-toggle.open .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
 
-        .menu-toggle.open .bar:nth-child(2) {
-            opacity: 0;
-        }
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
 
-        .menu-toggle.open .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 
 /*****************nav css - end*******************/
 
@@ -190,6 +192,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.header-text {
+    background-color: rgba(170, 170, 87, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 35px;
 }
 
 .header-text h1 {
@@ -478,7 +487,7 @@ body {
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 260px !important;
+        width: 264px !important;
         height: 340px !important;
     }
 }
@@ -490,12 +499,12 @@ body {
     }
 
     .tranding-slide {
-        width: 208px !important;
+        width: 178px !important;
         height: 360px !important;
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 268px !important;
+        width: 260px !important;
         height: 360px !important;
     }
 }
@@ -631,21 +640,21 @@ body {
 }
 
 .glovo-btn {
-    width: 200px;
-    height: 50px;
+    width: 20dvw;
+    height: 6dvh;
     border: none;
-    background-image: url('/Assets/img (4).png'); /* Path to your background image */
-    background-size: cover; /* Adjust the size of the background image */
-    background-position: center; /* Center the background image */
-    color: white; /* Text color */
+    background-image: url('/Assets/img (4).png');
+    background-size: cover;
+    background-position: center;
+    color: white;
     font-size: 16px;
     text-align: center;
-    line-height: 50px; /* Align text vertically */
+    line-height: 50px;
     cursor: pointer;
 }
 .map-btn {
-    width: 200px;
-    height: 50px;
+    width: 20dvw;
+    height: 6dvh;
     border: none;
     background-image: url('/Assets/img (2).png'); /* Path to your background image */
     background-size: cover; /* Adjust the size of the background image */
@@ -746,11 +755,13 @@ body {
 
 .dish-description, .dish-price {
     margin: 0;
+    font-size: 12px;
 }
 
 .dish.expanded {
     z-index: 10;
     transform: scale(1.5);
+    margin-left: 30px;
 }
 
 /* Responsive Styles */
@@ -768,24 +779,38 @@ body {
 
 /*****************Menu - end*******************/
 
-
-/* footer
-footer {
-    background-color: #0f0f0f;
-    color: #fff;
-    height: 25vh;
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    height: 30px;
+    width: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
     font-size: 20px;
-    padding-left: 50px;
-    display: flex;
-    justify-content: center;
-}*/
+    opacity: 0.7; /* Slightly transparent */
+    transition: opacity 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
 
 footer {
     background-color: #000000;
     padding: 5px;
     text-align: center;
     color: white;
-    position: rlative;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: fit-content;
@@ -807,5 +832,3 @@ footer p {
     font-size: 24px;
     text-decoration: none;
 }
-
-

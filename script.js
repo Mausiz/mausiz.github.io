@@ -1,5 +1,3 @@
-// script.js
-
 // Toggle navigation for mobile menu
 document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('nav-list').classList.toggle('active');
@@ -50,19 +48,19 @@ var trandingSlider = new Swiper('.tranding-slider', {
             spaceBetween: 10
         },
         412: {
-            slidesPerView: 2.2,
+            slidesPerView: 3,
             spaceBetween: 20
         },
         430: {
-            slidesPerView: 2.3,
-            spaceBetween: 20
+            slidesPerView: 3,
+            spaceBetween: 30
         },
         720: {
-            slidesPerView: 2.82,
+            slidesPerView: 3.42,
             spaceBetween: 30
         },
         768: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.6,
             spaceBetween: 30
         },
         820: {
@@ -140,3 +138,24 @@ function initMap() {
     });
 }
 
+// Get the button
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when the user scrolls down 500px from the top
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+// Scroll to the top when the user clicks the button
+scrollToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
