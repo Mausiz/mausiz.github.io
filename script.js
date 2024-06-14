@@ -42,7 +42,7 @@ var trandingSlider = new Swiper('.tranding-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    breakpoints: {
+    /*breakpoints: {
         320: {
             slidesPerView: 2,
             spaceBetween: 10
@@ -79,7 +79,7 @@ var trandingSlider = new Swiper('.tranding-slider', {
             slidesPerView: 3.89,
             spaceBetween: 60
         }
-    }
+    }*/
 });
 
 // Image expansion and collapse
