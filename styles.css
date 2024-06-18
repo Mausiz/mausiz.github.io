@@ -304,17 +304,17 @@ body {
 
 .tranding-slide-content .food-price {
     position: absolute;
-    top: 0.5rem;
-    right: 0.2rem;
-    font-size: 1.2rem;
+    top: 7%;
+    right: -39%;
+    font-size: 90%;
     color: var(--white);
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
     position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-    font-size: 1.5rem;
+    bottom: 7%;
+    left: 10%;
+    font-size: 85%;
     color: var(--white);
 }
 
@@ -327,11 +327,12 @@ body {
 }*/
 
 .food-name {
-    font-size: 1.2rem;
+    font-size: 90%;
 }
 
-.rating ion-icon {
+.reviews ion-icon {
     color: var(--primary);
+    font-size: 90%;
 }
 
 .swiper-slide-shadow-left,
