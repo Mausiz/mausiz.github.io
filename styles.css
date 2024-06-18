@@ -491,12 +491,12 @@ body {
     }
 
     .tranding-slide {
-        width: 224px !important;
+        width: 240px !important;
         height: 340px !important;
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 260px !important;
+        width: 280px !important;
         height: 340px !important;
     }
 }
@@ -508,12 +508,12 @@ body {
     }
 
     .tranding-slide {
-        width: 210px !important;
+        width: 220px !important;
         height: 360px !important;
     }
 
     .tranding-slide .tranding-slide-img img {
-        width: 250px !important;
+        width: 270px !important;
         height: 360px !important;
     }
 }
