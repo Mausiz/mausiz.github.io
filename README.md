@@ -1,1 +1,3 @@
-This is a template of a cafe website. See the sample at (https://mausiz.github.io/)
+This is a template for a cafe website. 
+Made using HTML, CSS and Javascript.
+See the sample at (https://mausiz.github.io/)
